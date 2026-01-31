@@ -22,14 +22,14 @@ public class Scene01Events : MonoBehaviour
     [SerializeField] GameObject charName;
     [SerializeField] GameObject fadeOut;
 
-    void Update()
-    {
-        textLength = TextCreator.charCount;
-    }
-
     private void Start()
     {
         StartCoroutine(EventStarter());
+    }
+
+    void Update()
+    {
+        textLength = TextCreator.charCount;
     }
 
     IEnumerator EventStarter()
@@ -130,7 +130,7 @@ IEnumerator EventFour()
     fadeOut.SetActive(true);
     yield return new WaitForSeconds(2);
     eventPos = 4;
-    SceneManager.LoadScene(1);
+    SceneManager.LoadScene(3);
 }
 
     public void NextButton()
