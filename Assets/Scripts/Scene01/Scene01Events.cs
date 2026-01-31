@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Scene01Events : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class Scene01Events : MonoBehaviour
     [SerializeField] GameObject nextButton;
     [SerializeField] int eventPos = 0;
     [SerializeField] GameObject charName;
+    [SerializeField] GameObject fadeOut;
 
     void Update()
     {
@@ -77,11 +79,77 @@ IEnumerator EventOne()
 }
 
 
+IEnumerator EventTwo() 
+{
+    //Event 2
+    nextButton.SetActive(false);
+    charJun.SetActive(true);
+    textBox.SetActive(true);
+    charName.GetComponent<TMPro.TMP_Text>().text = "Holly Char";
+
+    textToSpeak = "Danger Days, Black Parade, Teenage Years, Mr. Brightside, Gangnum Style.";
+    textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+    currentTextLength = textToSpeak.Length;
+    TextCreator.runTextPrint = true;
+    yield return new WaitForSeconds(0.05f);
+    yield return new WaitForSeconds(1);
+    yield return new WaitUntil(() => textLength == currentTextLength);
+    yield return new WaitForSeconds(0.5f);
+
+    nextButton.SetActive(true);
+    eventPos = 3;
+}
+
+IEnumerator EventThree() 
+{
+    //Event 3
+    nextButton.SetActive(false);
+    charJun.SetActive(true);
+    textBox.SetActive(true);
+    charName.GetComponent<TMPro.TMP_Text>().text = "Jun Char";
+
+    textToSpeak = "Fuck you!";
+    textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+    currentTextLength = textToSpeak.Length;
+    TextCreator.runTextPrint = true;
+    yield return new WaitForSeconds(0.05f);
+    yield return new WaitForSeconds(1);
+    yield return new WaitUntil(() => textLength == currentTextLength);
+    yield return new WaitForSeconds(0.5f);
+
+    nextButton.SetActive(true);
+    eventPos = 4;
+}
+
+IEnumerator EventFour() 
+{
+    //Event 4
+    nextButton.SetActive(false);
+    charJun.SetActive(true);
+    textBox.SetActive(true);
+    fadeOut.SetActive(true);
+    yield return new WaitForSeconds(2);
+    eventPos = 4;
+    SceneManager.LoadScene(1);
+}
+
     public void NextButton()
     {
-if (eventPos == 1) 
+      if (eventPos == 1) 
       {
           StartCoroutine(EventOne());
+      }
+      if (eventPos == 2) 
+      {
+          StartCoroutine(EventTwo());
+      }
+      if (eventPos == 3) 
+      {
+          StartCoroutine(EventThree());
+      }
+      if (eventPos == 4) 
+      {
+          StartCoroutine(EventFour());
       }
     }
 }
