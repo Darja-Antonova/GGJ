@@ -62,7 +62,7 @@ IEnumerator LoadScene()
     IEnumerator TransferToCredits()
     {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(15);
     }
 
     IEnumerator StopFade()
