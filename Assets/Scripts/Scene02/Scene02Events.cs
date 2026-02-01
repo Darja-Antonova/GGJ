@@ -23,6 +23,7 @@ public class Scene02Events : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetInt("LoadState", 2);
         StartCoroutine(EventStarter());
     }
 
