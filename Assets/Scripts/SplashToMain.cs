@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class SplashToMain : MonoBehaviour
 {
-    
+    [SerializeField] AudioSource Train;
     void Start()
     {
         StartCoroutine(SplashSequence());
+        Train.Play();
     }
 
     IEnumerator SplashSequence()

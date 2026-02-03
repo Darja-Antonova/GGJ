@@ -20,7 +20,11 @@ public class Day_01Events_06 : MonoBehaviour
     [SerializeField] int eventPos = 0;
     [SerializeField] GameObject charName;
     [SerializeField] GameObject fadeOut;
-    [SerializeField] GameObject charChad;
+
+    [SerializeField] GameObject charChadEnt;
+    [SerializeField] GameObject charChadHuh;
+    [SerializeField] GameObject charChadHappy;
+    [SerializeField] GameObject charChadLeave;
 
     private void Start()
     {
@@ -60,6 +64,7 @@ public class Day_01Events_06 : MonoBehaviour
         //Event 1
         nextButton.SetActive(false);
         textBox.SetActive(true);
+        charChadEnt.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = "???";
 
         textToSpeak = "“STOPPPP!! You can’t leave yet! You must help me! This is a situation of life and death!” an exasperated face appears before you, blocking your way forward.";
@@ -102,7 +107,6 @@ public class Day_01Events_06 : MonoBehaviour
         //Event 3
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        charChad.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = "???";
 
         textToSpeak = "“My pet moth Carlos! I had him just yesterday, but I can’t find him anymore... have you seen him anywhere? He’s cute and fluffy” the emo looking man pleads, desperate for any leads or answers.";
@@ -203,6 +207,8 @@ public class Day_01Events_06 : MonoBehaviour
         //Event 8
         nextButton.SetActive(false);
         textBox.SetActive(true);
+        charChadEnt.SetActive(false);
+        charChadHuh.SetActive(true);
 
         textToSpeak = "“I appreciate your confidence in someone you just met but… wouldn’t it be hard to find him in daylight anyways? What if we wait till nightfall?” you reply, knowing that what you’re saying is a blatant lie. After all, you’re getting out of here today.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
@@ -222,6 +228,8 @@ public class Day_01Events_06 : MonoBehaviour
         //Event 9
         nextButton.SetActive(false);
         textBox.SetActive(true);
+        charChadHuh.SetActive(false);
+        charChadHappy.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = "???";
 
         textToSpeak = "“You’re…You’re right! We will find Carlos at night… surely he’ll come searching for his buddy then! Thank you, oh thank you!” the man cries, his eyes lighting up with hope.";
@@ -242,7 +250,9 @@ public class Day_01Events_06 : MonoBehaviour
         //Event 10
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        charChad.SetActive(false);
+        charChadHappy.SetActive(false);
+        charChadLeave.SetActive(true);
+        charName.GetComponent<TMPro.TMP_Text>().text = "Chad";
 
         textToSpeak = "“If you ask the others where Chad is later, you’ll be able to find me.” He smiles, waving his hand a little as he leaves and walks towards the back of the motel. Most likely to find more moths.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
@@ -262,6 +272,7 @@ public class Day_01Events_06 : MonoBehaviour
         //Event 11
         nextButton.SetActive(false);
         textBox.SetActive(true);
+        charChadLeave.SetActive(false);
         charName.GetComponent<TMPro.TMP_Text>().text = " ";
 
         textToSpeak = "You sigh heavily, praying no one else interrupts you as you reach for your phone to call the road assistance again.";

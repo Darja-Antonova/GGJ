@@ -20,10 +20,22 @@ public class Night_01Events : MonoBehaviour
     [SerializeField] int eventPos = 0;
     [SerializeField] GameObject charName;
     [SerializeField] GameObject fadeOut;
-    [SerializeField] GameObject charMonA;
-    [SerializeField] GameObject charMonB;
-    [SerializeField] GameObject charMonC;
-    [SerializeField] GameObject charMonD;
+
+    [SerializeField] GameObject charMarvMon;
+    [SerializeField] GameObject charMarvMonT;
+
+    [SerializeField] GameObject charAnnieMon;
+    [SerializeField] GameObject charAnnieMonT;
+
+    [SerializeField] GameObject charChadMon;
+    [SerializeField] GameObject charChadMonT;
+
+    [SerializeField] GameObject charDaphMon;
+    [SerializeField] GameObject charDaphMonT;
+
+    [SerializeField] GameObject Room1;
+    [SerializeField] GameObject Room2;
+    [SerializeField] GameObject Room3;
 
     private void Start()
     {
@@ -103,7 +115,8 @@ public class Night_01Events : MonoBehaviour
         //Event 3
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        charMonA.SetActive(true);
+        Room1.SetActive(true);
+        charMarvMon.SetActive(true);
 
         textToSpeak = "Stepping out was a mistake. A horrible, incredible creature stands atop the stairs, glaring. Its teeth gleam in the stream of moonlight entering the side window. What in the hell is wrong with this motel?";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
@@ -142,6 +155,8 @@ public class Night_01Events : MonoBehaviour
         //Event 5
         nextButton.SetActive(false);
         textBox.SetActive(true);
+        charMarvMon.SetActive(false);
+        charMarvMonT.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = "?!?!";
 
         textToSpeak = "“I... will... eat... you. I WILL...... EAT....... YOU.” It shrieks in a low tone as it starts to charge at you.";
@@ -162,7 +177,7 @@ public class Night_01Events : MonoBehaviour
         //Event 6
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        charMonA.SetActive(false);
+        charMarvMonT.SetActive(false);
         charName.GetComponent<TMPro.TMP_Text>().text = " ";
 
         textToSpeak = "“Oh hell no...” You think to yourself as you quickly duck under the creature, sprinting down the stairs when suddenly... you fall down the last few steps of the stairs.";
@@ -183,7 +198,8 @@ public class Night_01Events : MonoBehaviour
         //Event 7
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        charMonB.SetActive(true);
+        Room2.SetActive(true);
+        charAnnieMonT.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = "?!?!";
 
         textToSpeak = "You turn to look behind you when a massive centipede greets you. “Oh little bug, did you not see me there?~” the insect chuckles, its eyes rolling back.";
@@ -204,7 +220,8 @@ public class Night_01Events : MonoBehaviour
         //Event 8
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        charMonB.SetActive(false);
+        charAnnieMonT.SetActive(false);
+        charAnnieMon.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = " ";
 
         textToSpeak = "As you scramble to pick yourself up, the term “little bug” seems familiar to you... but you don’t have time to dwell on it.";
@@ -224,7 +241,7 @@ public class Night_01Events : MonoBehaviour
     {
         //Event 9
         nextButton.SetActive(false);
-        textBox.SetActive(true);
+        textBox.SetActive(true); 
 
         textToSpeak = "You know you won’t make it out alive of this place if you don’t leave right now. You heave and wheeze as you press onwards, running as fast as your legs can carry you through the lobby.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
@@ -263,7 +280,7 @@ public class Night_01Events : MonoBehaviour
         //Event 11
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        charMonC.SetActive(true);
+        charChadMon.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = " ";
 
         textToSpeak = "You feel thick, fuzzy legs wrap around your legs as they try to drag you back. “NO! LET ME GO! LET ME OUT OF HERE” you scream, kicking and thrashing around on the ground like a helpless child. You were so close... so close to getting out when...";
@@ -284,6 +301,8 @@ public class Night_01Events : MonoBehaviour
         //Event 12
         nextButton.SetActive(false);
         textBox.SetActive(true);
+        charChadMon.SetActive(false);
+        charChadMonT.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = "?!?!";
 
         textToSpeak = "“fslkk fslkk rrsl hrr krslst rrsl” the spider almost sounds like it’s reprimanding you as it recoils slightly from... pain? You take this opportunity to wriggle yourself out of its grasp.";
@@ -304,7 +323,8 @@ public class Night_01Events : MonoBehaviour
         //Event 13
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        charMonC.SetActive(false);
+        charChadMonT.SetActive(false);
+        Room3.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = " ";
 
         textToSpeak = "As the door appears in sight, you fling it open, not daring to look back on what is happening back there. Surely this is just a nightmare... there’s no way this could be your reality.";
@@ -325,7 +345,7 @@ public class Night_01Events : MonoBehaviour
         //Event 14
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        charMonD.SetActive(true);
+        charDaphMon.SetActive(true);
 
         textToSpeak = "You make it halfway across the parking lot when it appears before you. An inky, dark, mess with its mouth agape, standing right in front of you.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
@@ -345,6 +365,8 @@ public class Night_01Events : MonoBehaviour
         //Event 15
         nextButton.SetActive(false);
         textBox.SetActive(true);
+        charDaphMon.SetActive(false);
+        charDaphMonT.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = "?!?!";
 
         textToSpeak = "“Not. Yet.” the hoarse voice commands, sending your vision to the abyss as everything darkens around you.";
@@ -363,13 +385,13 @@ public class Night_01Events : MonoBehaviour
     IEnumerator EventSixteen()
     {
         //Event 16
-        charMonD.SetActive(false);
+        charDaphMonT.SetActive(false);
         nextButton.SetActive(false);
         textBox.SetActive(true);
         fadeOut.SetActive(true);
         yield return new WaitForSeconds(2);
         eventPos = 16;
-        SceneManager.LoadScene(11);
+        SceneManager.LoadScene(12);
     }
     public void NextButton()
     {

@@ -140,9 +140,10 @@ public class Day_01Events : MonoBehaviour
 
         firstOption.SetActive(false);
         secondOption.SetActive(false);
-        charAnnie.SetActive(true);
+        charAnnie.SetActive(false);
 
         //Switch to Interaction Scene
+        fadeOut.SetActive(true);
         nextButton.SetActive(false);
         textBox.SetActive(true);
         yield return new WaitForSeconds(2);

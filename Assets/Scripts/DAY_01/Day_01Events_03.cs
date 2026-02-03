@@ -124,7 +124,7 @@ public class Day_01Events_03 : MonoBehaviour
 
         firstOption.SetActive(false);
         secondOption.SetActive(false);
-        charMarv.SetActive(true);
+        charMarv.SetActive(false);
 
         //Switch to Interaction Scene
         nextButton.SetActive(false);
@@ -170,7 +170,7 @@ public class Day_01Events_03 : MonoBehaviour
         yield return new WaitForSeconds(10);
         charMarv.SetActive(false);
         mainTextObject.SetActive(false);
-        SceneManager.LoadScene(9);
+        SceneManager.LoadScene(8);
     }
 
 

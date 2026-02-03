@@ -20,7 +20,16 @@ public class Day_01Events_05 : MonoBehaviour
     [SerializeField] int eventPos = 0;
     [SerializeField] GameObject charName;
     [SerializeField] GameObject fadeOut;
-    [SerializeField] GameObject charDaph;
+
+    [SerializeField] GameObject charDaphEnt;
+    [SerializeField] GameObject charDaphNue;
+    [SerializeField] GameObject charDaphSmile;
+    [SerializeField] GameObject charDaphHuh;
+    [SerializeField] GameObject charDaphHuhT;
+    [SerializeField] GameObject charDaphAng;
+    [SerializeField] GameObject charDaphTalk;
+    [SerializeField] GameObject charDaphHappyT;
+    [SerializeField] GameObject charDaphAngT;
 
     private void Start()
     {
@@ -81,6 +90,7 @@ public class Day_01Events_05 : MonoBehaviour
         //Event 2
         nextButton.SetActive(false);
         textBox.SetActive(true);
+        charDaphEnt.SetActive(true);
 
         textToSpeak = "As you pull into the room expecting blood and guts all you come across is... a lady standing in front of a washing machine.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
@@ -100,7 +110,8 @@ public class Day_01Events_05 : MonoBehaviour
         //Event 3
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        charDaph.SetActive(true);
+        charDaphEnt.SetActive(false);
+        charDaphAngT.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = "???";
 
         textToSpeak = "“Damnit, dammit, dammit!!!” she exclaims, kicking and punching the washing machine as if it were a sentient being.";
@@ -121,6 +132,8 @@ public class Day_01Events_05 : MonoBehaviour
         //Event 4
         nextButton.SetActive(false);
         textBox.SetActive(true);
+        charDaphAngT.SetActive(false);
+        charDaphAng.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = " ";
 
         textToSpeak = "“Um... is... everything okay?” you question, looking from the woman to the washing machine and back to the woman.";
@@ -141,6 +154,8 @@ public class Day_01Events_05 : MonoBehaviour
         //Event 5
         nextButton.SetActive(false);
         textBox.SetActive(true);
+        charDaphAng.SetActive(false);
+        charDaphTalk.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = "???";
 
         textToSpeak = "She snaps towards you rigidly and begins chuckling. “O-oh! I didn’t expect to see you here... haahaa....” she hums, her voice sounding almost hollow, tilting her head as she speaks.";
@@ -161,6 +176,8 @@ public class Day_01Events_05 : MonoBehaviour
         //Event 6
         nextButton.SetActive(false);
         textBox.SetActive(true);
+        charDaphTalk.SetActive(false);
+        charDaphNue.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = " ";
 
         textToSpeak = "“I heard screaming... was that you...? What happened?” you question anxiously, still recovering from the adrenaline rush that pushed you towards this place in the first place.";
@@ -181,6 +198,8 @@ public class Day_01Events_05 : MonoBehaviour
         //Event 7
         nextButton.SetActive(false);
         textBox.SetActive(true);
+        charDaphNue.SetActive(false);
+        charDaphHuhT.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = "???";
 
         textToSpeak = "“What screaming?” she asked blankly, raising her eyebrows ever so slightly.";
@@ -201,6 +220,8 @@ public class Day_01Events_05 : MonoBehaviour
         //Event 8
         nextButton.SetActive(false);
         textBox.SetActive(true);
+        charDaphHuhT.SetActive(false);
+        charDaphHappyT.SetActive(true);
 
         textToSpeak = "After a moment’s pause she continued... “Ohhh you mean my friend here?” she points to the washing machine, smiling.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
@@ -221,7 +242,7 @@ public class Day_01Events_05 : MonoBehaviour
         nextButton.SetActive(false);
         textBox.SetActive(true);
 
-        textToSpeak = "Don’t worry about it, that’s between me and it.”she explained, unfazed, as if a screaming washing machine was the most normal thing in the world.";
+        textToSpeak = "Don’t worry about it, that’s between me and it.” she explained, unfazed, as if a screaming washing machine was the most normal thing in the world.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -239,6 +260,8 @@ public class Day_01Events_05 : MonoBehaviour
         //Event 10
         nextButton.SetActive(false);
         textBox.SetActive(true);
+        charDaphHappyT.SetActive(false);
+        charDaphSmile.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = " ";
 
         textToSpeak = "You stand there dazed and confused. What could you possibly respond with to that? I mean, I guess it was kind of charming how she saw an inanimate object as her friend but... why was it screaming... why was she hitting it...";
@@ -278,6 +301,8 @@ public class Day_01Events_05 : MonoBehaviour
         //Event 12
         nextButton.SetActive(false);
         textBox.SetActive(true);
+        charDaphSmile.SetActive(false);
+        charDaphHappyT.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = "???";
 
         textToSpeak = "“Seriously, I swear my friend here’s okay! See! We’re still friendly with each other” she smiled as she pat the washing machine on its... head?";
@@ -298,6 +323,8 @@ public class Day_01Events_05 : MonoBehaviour
         //Event 13
         nextButton.SetActive(false);
         textBox.SetActive(true);
+        charDaphHappyT.SetActive(false);
+        charDaphSmile.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = " ";
 
         textToSpeak = "You have no clue what it could be in terms of washing machine anatomy.";

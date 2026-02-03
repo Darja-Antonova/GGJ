@@ -405,7 +405,7 @@ public class IntroEvents : MonoBehaviour
         fadeOut.SetActive(true);
         yield return new WaitForSeconds(2);
         eventPos = 19;
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
     public void NextButton()
     {

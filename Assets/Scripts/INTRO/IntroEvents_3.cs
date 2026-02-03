@@ -178,7 +178,7 @@ public class IntroEvents_3 : MonoBehaviour
         fadeOut.SetActive(true);
         yield return new WaitForSeconds(2);
         eventPos = 7;
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(5);
     }
     public void NextButton()
     {

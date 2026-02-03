@@ -23,6 +23,7 @@ public class Day_01Events_02 : MonoBehaviour
     [SerializeField] GameObject fadeOut;
 
     [SerializeField] GameObject charAnnie;
+    [SerializeField] GameObject charAnnieFade;
 
     private void Start()
     {
@@ -226,7 +227,8 @@ public class Day_01Events_02 : MonoBehaviour
         //Event 9
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        charAnnie.SetActive(true);
+        charAnnie.SetActive(false);
+        charAnnieFade.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = "Annie";
 
         textToSpeak = "“Well, I’m Annie!, I’ll see you around...” she begins walking away, chuckling to herself and muttering, “little bug~” as she turned the corner.";
